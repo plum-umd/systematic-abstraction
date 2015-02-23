@@ -1,4 +1,4 @@
-import Data.Map
+import Data.Map hiding (foldl)
 import Syntax
 import Reachability
 import MapUpdate

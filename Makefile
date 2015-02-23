@@ -1,11 +1,8 @@
 GHC=ghc
 
-BINS=reduction cek cek-map cesk ceskp ceskpt ceskpt2 aceskpt ceskptl aceskptl cesks ceskst cesksl acesksl anf-concrete 0aceskp
+BINS=reduction cek cek-map cesk ceskp ceskpt ceskpt2 aceskpt ceskptl aceskptl cesks ceskst cesksl acesksl 0aceskp
 
 all: $(BINS)
-
-anf-concrete: anf-concrete.hs ANFSyntax.hs
-	ghc --make anf-concrete.hs
 
 acesksl: acesksl.hs
 	ghc -XTypeOperators --make acesksl.hs
@@ -15,7 +12,6 @@ cesksl: cesksl.hs
 
 ceskst: ceskst.hs
 	ghc -XTypeOperators --make ceskst.hs
-
 
 0aceskp: 0aceskp.hs
 	ghc -XTypeOperators -XTypeSynonymInstances --make 0aceskp.hs
@@ -52,8 +48,8 @@ cek: cek.hs
 
 reduction: reduction.hs
 	ghc -XViewPatterns --make reduction.hs
+
 clean:
-	cleanup
 	rm -vf *.{hi,o} $(BINS)
 
 

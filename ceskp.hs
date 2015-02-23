@@ -2,7 +2,7 @@
  -- CESKp: A CESK* machine in which continuations contain pointers
  --        to the subsequent continuations.
 
-import Data.Map
+import Data.Map hiding (foldl)
 import Syntax
 import Reachability
 import MapUpdate
